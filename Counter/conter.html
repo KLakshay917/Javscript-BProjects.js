@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<link rel="stylesheet" href="countercss.css">
+
+<body>
+    <div class="full">
+    <h2 id="hi">Counter</h2>
+     <h4 id="count">0</h4>
+     <div class="container">
+    <button id="sub">-</button>
+    <button id="add">+</button>
+</div> 
+</div>   
+
+</body>
+<script>
+let add=document.querySelector("#add");
+let sub=document.querySelector("#sub");
+let count=document.querySelector("#count");
+let i=0;
+
+add.addEventListener('click',plus);
+sub.addEventListener('click',minus);
+function plus()
+{
+i++;
+if(i<0)
+count.style.color='red';
+else
+count.style.color='black';
+count.textContent=i;
+}
+function minus()
+{
+i--;
+if(i<0)
+count.style.color='red';
+else
+count.style.color='black';
+
+count.textContent=i;
+}
+
+</script>
+
+</html>
